@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2018-09-04 14:44:21
+Date: 2018-09-04 15:44:33
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -258,27 +258,6 @@ INSERT INTO `menu` VALUES ('5', '权限', '3', '/admin/permission/index', null, 
 INSERT INTO `menu` VALUES ('6', '角色', '3', '/admin/role/index', null, null);
 INSERT INTO `menu` VALUES ('7', '分配', '3', '/admin/assignment/index', null, null);
 INSERT INTO `menu` VALUES ('8', '菜单', '3', '/admin/menu/index', null, null);
-
--- ----------------------------
--- Table structure for test
--- ----------------------------
-DROP TABLE IF EXISTS `test`;
-CREATE TABLE `test` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of test
--- ----------------------------
-INSERT INTO `test` VALUES ('2', 'g', 'w');
-INSERT INTO `test` VALUES ('3', 'asdf', 'dfdf');
-INSERT INTO `test` VALUES ('4', 'gas', 'dfs');
-INSERT INTO `test` VALUES ('5', 'asdfas', 'agcv');
-INSERT INTO `test` VALUES ('6', 'ggg', 'wwww');
-INSERT INTO `test` VALUES ('9', 'asdfsd', 'gwwrer');
 
 -- ----------------------------
 -- Table structure for user
