@@ -33,7 +33,7 @@ use fsyd\admin\components\MenuHelper;
         <!-- /.search form -->
         
         <?=
-        dmstr\widgets\Menu::widget([
+        fsyd\admin\widgets\Menu::widget([
             'options' => ['class' => 'sidebar-menu tree', 'data-widget' => 'tree'],
             'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id),
         ]);

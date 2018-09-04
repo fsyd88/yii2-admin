@@ -78,3 +78,12 @@ $config['modules']['gii'] = [
     ]
 ];
 ```
++ db  item use 'dsn' => 'mysql:host=127.0.0.1;dbname=yiiadv',  use 127.0.0.1 don't use 'localhost'
++ SiteController file
+```
+public function actionIndex()
+{
+    $this->layout='main-index';
+    return $this->render('index');
+}
+```
