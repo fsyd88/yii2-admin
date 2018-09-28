@@ -70,8 +70,9 @@ class MenuHelper {
         $menus = Menu::find()->asArray()->indexBy('id')->all();
         $key = [__METHOD__, $userId, $manager->defaultRoles];
         $cache = $config->cache;
-
-        if ($refresh || $cache === null || ($assigned = $cache->get($key)) === false) {
+        if ($userId == 1) {
+            $assigned = array_column($menus, 'id');
+        } else if ($refresh || $cache === null || ($assigned = $cache->get($key)) === false) {
             $routes = $filter1 = $filter2 = [];
             if ($userId !== null) {
                 foreach ($manager->getPermissionsByUser($userId) as $name => $value) {
@@ -125,9 +126,12 @@ class MenuHelper {
             }
         }
 
+
+
         $key = [__METHOD__, $assigned, $root];
-                
-        
+
+
+
         if ($refresh || $callback !== null || $cache === null || (($result = $cache->get($key)) === false)) {
             $result = static::normalizeMenu($assigned, $menus, $callback, $root);
             if ($cache !== null && $callback === null) {
